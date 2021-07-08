@@ -1,7 +1,7 @@
-import dynamiClientFramework.clients.Client;
-import dynamiClientFramework.clients.DJMSClientCreator;
-import dynamiClientFramework.clients.Sample;
-import dynamiClientFramework.clients.exceptions.InvalidSampleTTLException;
+import adaptiveProducerFramework.producers.JMSProducerCreator;
+import adaptiveProducerFramework.producers.Producer;
+import adaptiveProducerFramework.producers.Sample;
+import adaptiveProducerFramework.producers.exceptions.InvalidSampleTTLException;
 
 public class SimpleTest {
 
@@ -9,19 +9,18 @@ public class SimpleTest {
 		String acceptorAddress = "tcp://localhost:61616";
 		String queueName = "testQueue";
 		//Initialize client
-		Client dclient = new DJMSClientCreator().createDynamicClient(queueName, acceptorAddress);
+		Producer producer = new JMSProducerCreator().createProducer(queueName, acceptorAddress);
 		
 		//start connection and queue monitoring
-		dclient.startClient();
+		producer.startProducer();
 		
 		//Send a sample
 		Sample sample = new Sample(20.0, 500);
-		dclient.trySending(sample);
+		producer.trySending(sample);
 		
 		//Close connection and queue monitoring
-		dclient.stopClient();
+		producer.stopProducer();
 	}
-
 }
 
 

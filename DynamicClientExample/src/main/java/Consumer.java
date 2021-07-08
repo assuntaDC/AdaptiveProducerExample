@@ -10,9 +10,9 @@ import javax.jms.QueueConnectionFactory;
 import javax.jms.QueueReceiver;
 import javax.jms.QueueSession;
 import javax.jms.Session;
-import dynamiClientFramework.clients.Sample;
-
 import org.apache.activemq.artemis.jms.client.ActiveMQQueueConnectionFactory;
+import adaptiveProducerFramework.producers.Sample;
+
 
 public class Consumer{
 	public long CONSUMER_PERIOD = 1000;

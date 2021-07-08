@@ -10,6 +10,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/Lib/apache-artemis-2.17.0/lib/client/artemis-jms-client-all-2.17.0.jar"/>
-	<classpathentry kind="lib" path="C:/Lib/dynamicClientFramework.jar"/>
+	<classpathentry kind="lib" path="C:/Lib/adaptiveProducerFramework.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
