@@ -1,2 +1,2 @@
-# DynamicClientExample
-Usage example of Dynamic Client Framework
+# AdaptiveProducerExample
+Usage example of Adaptive Producer Framework
